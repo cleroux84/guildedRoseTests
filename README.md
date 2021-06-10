@@ -129,4 +129,4 @@ On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g.
 ps
 ```
 
-**Happy coding**!
+**Happy coding**!# guildedRoseTests
