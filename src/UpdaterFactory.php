@@ -3,10 +3,10 @@
 namespace App;
 
 use App\Updater\IUpdater;
+use App\InterfaceItem;
 
 class UpdaterFactory implements IUpdaterFactory
 {
-
     private IUpdaterFactoryRegistry $updaterFactoryRegistry;
 
     public function __construct(IUpdaterFactoryRegistry $registry)
@@ -14,13 +14,13 @@ class UpdaterFactory implements IUpdaterFactory
         $this->updaterFactoryRegistry = $registry;
     }
 
-    protected static function newClass(string $className, Item $item):IUpdater
+    protected static function newClass(string $className, InterfaceItem $item):IUpdater
     {
         $updater = new $className($item);
         return $updater;
     }
 
-    public function build(Item $item):IUpdater
+    public function build(InterfaceItem $item):IUpdater
     {
         $className = $this->updaterFactoryRegistry->resolve($item);
         return self::newClass($className, $item);

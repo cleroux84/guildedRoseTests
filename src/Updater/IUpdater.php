@@ -2,11 +2,11 @@
 
 namespace App\Updater;
 
-use App\Item;
+use App\InterfaceItem;
 
 interface IUpdater
 {
-    public static function resolve(Item $item):bool;
+    public static function resolve(InterfaceItem $item):bool;
  
     public function updateSellIn():void;
  

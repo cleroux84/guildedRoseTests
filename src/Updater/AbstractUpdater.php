@@ -2,18 +2,18 @@
 
 namespace App\Updater;
 
-use App\Item;
+use App\InterfaceItem;
 
 abstract class AbstractUpdater implements IUpdater
 {
-    protected Item $item;
+    protected InterfaceItem $item;
 
     function __construct($item)
     {
         $this->item = $item;
     }
 
-    abstract public static function resolve(Item $item):bool;
+abstract public static function resolve(InterfaceItem $item):bool;
 
    protected function isExpired():bool
     {

@@ -1,10 +1,10 @@
 <?php
 
 namespace App;
-use App\Item;
 use App\Updater\IUpdater;
+use App\InterfaceItem;
 
 interface IUpdaterFactory
 {
-    public function build(Item $item):IUpdater;
+    public function build(InterfaceItem $item):IUpdater;
 }

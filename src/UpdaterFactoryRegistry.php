@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\InterfaceItem;
+
 class UpdaterFactoryRegistry implements IUpdaterFactoryRegistry
 {
 
@@ -13,7 +15,7 @@ class UpdaterFactoryRegistry implements IUpdaterFactoryRegistry
         array_push($this->updaters, $updater);
     }
 
-    public function resolve(Item $item):string
+    public function resolve(InterfaceItem $item):string
     {
         foreach ($this->updaters as $u){
             if($u::resolve($item))

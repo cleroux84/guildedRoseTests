@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App;
 
-final class Item
+final class Item implements InterfaceItem
 {
     /**
      * @var string

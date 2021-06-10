@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Updater;
-use App\Item;
+
+use App\InterfaceItem;
 
 class AgedBrieUpdater extends AbstractUpdater implements IUpdater
 {
 
-    public static function resolve(Item $item):bool {
+    public static function resolve(InterfaceItem $item):bool {
         if($item->name === "Aged Brie") {
             return true;
         }

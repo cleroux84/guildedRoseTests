@@ -2,12 +2,13 @@
 
 namespace App\Updater;
 
+use App\InterfaceItem;
 use App\Item;
 
 class BackstagePassUpdater extends AbstractUpdater implements IUpdater
 {
 
-    static function resolve(Item $item):bool {
+    static function resolve(InterfaceItem $item):bool {
         if($item->name === 'Backstage passes to a TAFKAL80ETC concert') {
             return true;
         } else {

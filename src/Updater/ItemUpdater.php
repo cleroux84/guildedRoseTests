@@ -2,12 +2,13 @@
 
 namespace App\Updater;
 
+use App\InterfaceItem;
 use App\Item;
 
 class ItemUpdater extends AbstractUpdater implements IUpdater
 {
 
-    static function resolve(Item $item):bool {
+    static function resolve(InterfaceItem $item):bool {
         return true;
     }
 
